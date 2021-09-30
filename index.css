@@ -1,0 +1,128 @@
+/* custom for people icon */
+@media only screen and (min-width: 900px) {
+    .form-people:after {
+        position: absolute;
+        left: 180px;
+        top: 20px;
+        content: url(./images/icon-person.svg);
+    }
+    .tips-select>*{
+        width: 23%;
+        font-size: 24px;
+    }
+}
+
+/* custom for tips select font size */
+@media screen and (max-width: 899px) and (min-width: 577px) {
+    .tips-select>*{
+        width: 23%;
+        font-size: 14px;
+    }
+}
+
+/* desktop */
+@media only screen and (min-width: 576px) {
+    body {
+        padding: 8%;
+    }
+    .my-container{
+        width: 80%;
+    }
+    .col-results{
+        width: 40%;
+    }
+}
+
+/* mobile */
+@media only screen and (max-width: 576px) {
+    .tips-select>*{
+        width: 40%;
+        font-size: 24px;
+    }
+    .col-results{
+        width: 80%;
+    }
+    .form-people:after {
+        position: absolute;
+        left: 180px;
+        top: 20px;
+        content: url(./images/icon-person.svg);
+    }
+}
+
+body{
+    background: hsl(185, 41%, 84%);
+    text-align: center;
+    font-family: 'Space Mono', monospace;
+}
+.my-container{
+    background: hsl(0, 0%, 100%);
+    font-weight: 500;
+    border-radius: 20px;
+}
+input{
+    direction:rtl;
+}
+.form-bill:after {
+    position: absolute;
+    left: 55px;
+    top: 20px;
+    content: url(./images/icon-dollar.svg);
+}
+.tips-select>*{
+    margin-right: 5%;
+    margin-left: 5%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    background: hsl(183, 100%, 15%);
+    border-radius: 10px;
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+}
+.tips-choose{
+    background: #00A3A3;
+    color: hsl(0, 0%, 13%);
+}
+.tip-input{
+    background: hsl(189, 41%, 97%);
+    color: hsl(0, 0%, 13%);
+    font-size: 18px;
+}
+.col-results{
+    background: hsl(183, 100%, 15%);
+    border-radius: 20px;
+    color: hsl(0, 0%, 100%);
+}
+.numbers{
+    font-size: 33px;
+    font-weight: 700;
+    color: #00A3A3;
+}
+.btn-cyan{
+    background: #00A3A3;
+    color: hsl(183, 100%, 15%);
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 15%;
+    opacity: 0.5;
+}
+.btn-cyan:focus{
+    box-shadow: none;
+}
+.tips:not(.tips-choose):hover{
+    opacity: 0.7;
+}
+
+
+/* remove arrows in number type input */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

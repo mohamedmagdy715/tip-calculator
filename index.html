@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <!-- custom css -->
+  <link rel="stylesheet" href="./index.css">
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+
+  <title>Tip calculator app</title>
+
+</head>
+<body>
+  <img class="img-fluid m-5" src="./images/logo.svg">
+  <div class="container-fluid my-container">
+    <div class="row">
+      <div class="col-12 col-sm-6 px-4">
+        <div class="row mt-5 mb-3">
+          <div class="col">
+            <form class="form-floating  mx-4 form-bill">
+              <input type="number" class="form-control border border-2" id="bill" placeholder="0" step="any" min="0"
+              style="background: hsl(189, 41%, 97%);font-size: 24px;font-weight: 700;">
+              <small class="text-danger" id="billError" style="position: absolute;left: 0;visibility: hidden;">error</small>
+              <label for="bill">Bill</label>
+            </form>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col text-start mx-4 mt-3">
+            Select Tip %
+          </div>
+        </div>
+        <div class="row g-3 m-1 tips-select">
+          <div class="col-6 col-sm-4 tips" onclick="tipChoose(5,this)">
+            5%
+          </div>
+          <div class="col-6 col-sm-4 tips" onclick="tipChoose(10,this)">
+            10%
+          </div>
+          <div class="col-6 col-sm-4 tips" onclick="tipChoose(15,this)">
+            15%
+          </div>
+          <div class="col-6 col-sm-4 tips" onclick="tipChoose(25,this)">
+            25%
+          </div>
+          <div class="col-6 col-sm-4 tips" onclick="tipChoose(50,this)">
+            50%
+          </div>
+          <div class="col-6 col-sm-4 tip-input">
+            <form class="form-floating">
+              <input type="number" class="form-control border border-2" id="tip" placeholder="0" step="any" min="0"
+              style="background: hsl(189, 41%, 97%);height: 35px;font-weight: 700;">
+              <label for="tip" style="position: absolute;top: -15px;"><span class="d-sm-none d-xl-block">Custom</span></label>
+            </form>
+          </div>
+        </div>
+        <small class="text-danger" id="tipError" style="float: left;visibility: hidden;">error</small>
+        <div class="row my-5">
+          <div class="col">
+            <form class="form-floating  mx-4 form-people">
+              <input type="number" class="form-control border border-2" id="people" placeholder="1" step="1" min="1"
+              style="background: hsl(189, 41%, 97%);font-size: 24px;font-weight: 700;">
+              <small class="text-danger" id="peopleError" style="position: absolute;left: 0;visibility: hidden;">error</small>
+              <label for="people"><span class="d-sm-none d-lg-block">Number of People</span></label>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 p-5 mx-5 mx-md-1 mx-lg-4 mx-sm-0 my-sm-5 mb-5 mt-2 col-results">
+        <div class="row">
+          <div class="col">
+            Tip Amount
+            <br>
+            <span style="color: #B2B1B9;">
+              / person
+            </span>
+          </div>
+          <div class="col numbers ms-2">
+            <img src="./images/icon-dollar-copy.svg" style="width: 25px;">
+            <span id="tipPerson">
+              0.00
+            </span>
+          </div>
+        </div>
+        <div class="row my-5">
+          <div class="col">
+            Total
+            <br>
+            <span style="color: #B2B1B9;">
+              / person
+            </span>
+          </div>
+          <div class="col numbers ms-2" >
+            <img src="./images/icon-dollar-copy.svg" style="width: 25px;">
+            <span id="totalPerson">
+              0.00
+            </span>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col">
+            <button type="button" class="btn w-100 btn-cyan" id="reset" style="outline: none;">Reset</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<!-- bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+<script src="index.js"></script>
+</html>
